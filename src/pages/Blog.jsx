@@ -6,7 +6,7 @@ const Blog = () => {
     <Navigation/>
     <div className="blog">
       
-      <h1>Blog</h1>
+      <h3>Tu cherches quoi ici?</h3>
     </div>
     </>
   );

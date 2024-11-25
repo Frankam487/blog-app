@@ -16,7 +16,7 @@ const SortFunction = ({ data, setData, setSelectedRadio, check, setCheck }) => {
         +
       </button>
       <button className="reset" onClick={() => resetSearch()}>
-        Annuler la recherche
+        Commencer
       </button>
       <button className="flop" onClick={() => sortFlop()}>
         -
