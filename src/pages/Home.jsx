@@ -26,6 +26,7 @@ const Home = () => {
             type="range"
             onChange={(e) => setRangeValue(e.target.value)}
             defaultValue={rangeValue}
+            
             min="6"
             max="250"
           />
