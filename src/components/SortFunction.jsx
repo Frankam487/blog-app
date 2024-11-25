@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
-const SortFunction = ({ data, setData }) => {
+const SortFunction = ({ data, setData, setSelectedRadio }) => {
   SortFunction.propTypes = {
-    data: PropTypes.array,
-    setData: PropTypes.array,
+    // data: PropTypes.string,
+    // setData: PropTypes.string,
+    // setSelectedRadio,
   };
   const sortTop = () => {
     const sortedItems = [...data].sort((a, b) => b.population - a.population);
@@ -14,8 +14,8 @@ const SortFunction = ({ data, setData }) => {
     setData(sortedItems);
   };
   const resetSearch = () => {
-    console.log('ok');
-  }
+    setSelectedRadio('');
+  };
   return (
     <div className="sortFunction">
       <button onClick={() => sortTop()}>+</button>

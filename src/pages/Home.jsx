@@ -14,7 +14,7 @@ const Home = () => {
     axios.get('https://restcountries.com/v3.1/all').then((res) => {
       setData(res.data);
       setDataDisplay(false);
-      // console.log(res.data);
+  
     });
   }, []);
   return (
@@ -29,6 +29,7 @@ const Home = () => {
             min="6"
             max="250"
           />
+          <h2>{ rangeValue } Pays</h2>
           {radio.map((country, index) => (
             <li key={index}>
               <input
@@ -41,7 +42,11 @@ const Home = () => {
             </li>
           ))}
         </div>
-        <SortFunction data={ data } setData={setData} />
+        <SortFunction
+          data={data}
+          setSelectedRadio={setSelectedRadio}
+          setData={setData}
+        />
         {dataDisplay == true ? <p>Chargement en cous ...</p> : ''}
         {data
           .filter((country) => country.continents[0].includes(selectedRadio))
