@@ -16,7 +16,7 @@ const Home = () => {
       setData(res.data);
       setDataDisplay(false);
     });
-  }, []);
+  }, [rangeValue]);
   return (
     <div className="home">
       <Navigation />
