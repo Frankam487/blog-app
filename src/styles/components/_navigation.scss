@@ -1,0 +1,27 @@
+.navigate {
+
+  margin: 32px 0;
+
+  .nav {
+
+    border-bottom: 3px solid $skyblue;
+    padding: 5px 0;
+    color: $skyblueFonce;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin: 12px;
+      height: 28px;
+
+
+      a {
+        font-size: 1.2rem;
+        color: $skyblue;
+        font-weight: 600;
+      }
+    }
+  }
+}

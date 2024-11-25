@@ -1,0 +1,19 @@
+.sortFunction{
+  margin: 20px 0;
+  @include childCenter;
+
+  button{
+    border: none;
+    margin: 12px;
+    padding: 6px 12px;
+    background: transparent; 
+    border: .6px solid $skyblue;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+  &:hover {
+    padding: 5px;
+  }
+  }
+ 
+}

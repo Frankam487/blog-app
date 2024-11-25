@@ -12,9 +12,15 @@ const SortFunction = ({ data, setData, setSelectedRadio, check, setCheck }) => {
   };
   return (
     <div className="sortFunction">
-      <button onClick={() => sortTop()}>+</button>
-      <button onClick={() => resetSearch()}>Annuler la recherche</button>
-      <button onClick={() => sortFlop()}>-</button>
+      <button className="top" onClick={() => sortTop()}>
+        +
+      </button>
+      <button className="reset" onClick={() => resetSearch()}>
+        Annuler la recherche
+      </button>
+      <button className="flop" onClick={() => sortFlop()}>
+        -
+      </button>
     </div>
   );
 };

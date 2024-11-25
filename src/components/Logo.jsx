@@ -1,7 +1,10 @@
 const Logo = () => {
   return (
-    <div >
-      <h2><img src="./public/pic.jpg" height="40" alt="Logo react" />React World</h2>
+    <div className="logo">
+      <h2>
+        <img src="./public/download.png" height="40" alt="Logo react" />
+        <span>React World</span>
+      </h2>
     </div>
   );
 };

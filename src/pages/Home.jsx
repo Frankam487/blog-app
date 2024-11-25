@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
+import List from '../components/List';
 import Navigation from '../components/Navigation';
 import SortFunction from '../components/SortFunction';
 
@@ -21,28 +22,26 @@ const Home = () => {
     <div className="home">
       <Navigation />
       <ul>
-        <div className="range">
-          <input
-            type="range"
-            onChange={(e) => setRangeValue(e.target.value)}
-            defaultValue={rangeValue}
-            
-            min="6"
-            max="250"
-          />
-          <h2>{rangeValue} Pays</h2>
+        <div className="range-container">
+          <div className="range-content">
+            <input
+              type="range"
+              onChange={(e) => setRangeValue(e.target.value)}
+              defaultValue={rangeValue}
+              min="6"
+              max="250"
+            />
+            <i>{rangeValue} Pays</i>
+          </div>
           {radio.map((country, index) => (
-            <li key={index}>
-              <input
-                type="radio"
-                name="country"
-                id={country}
-                defaultValue={country}
-                checked={selectedRadio === country}
-                onChange={(e) => setSelectedRadio(e.target.id)}
+          
+              <List
+                key={index}
+                selectedRadio={selectedRadio}
+                setSelectedRadio={setSelectedRadio}
+                country={country}
               />
-              <label htmlFor={country}>{country}</label>
-            </li>
+            
           ))}
         </div>
         <SortFunction

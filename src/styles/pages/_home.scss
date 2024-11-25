@@ -1,0 +1,31 @@
+.home {
+  .range-container {
+  
+    background-color: $skyblue2;
+    margin: 0 20px;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+    padding: 10px 22px;
+    align-items: center;
+    box-shadow: 1px 4px 7px -1px $brownColor;
+    @media screen and (max-width: 700px) {
+      input[type="radio"] {
+        display: none;
+      }
+    }
+
+    .range-content {
+
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      i{
+        text-align: center;
+        padding: 6px 0;
+        color: $whiteCasse;
+        font-weight: 700;
+      }
+    }
+  }
+}

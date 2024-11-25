@@ -1,0 +1,21 @@
+.logo {
+
+  @include childCenter;
+  padding: 12px 0;
+
+  h2 {
+    background: url(../../../public/u.jpg)center/cover;
+    @include childCenter;
+    padding: 3px 12px;
+    border-radius: 12px;
+
+    span {
+      color: $white;
+    }
+
+    img {
+      border-radius: 40%;
+      border-radius: none;
+    }
+  }
+}

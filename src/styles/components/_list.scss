@@ -1,0 +1,19 @@
+.list {
+  @include childCenter;
+
+  ul {
+    padding: 3px 0;
+  }
+
+  label {
+    color: $brownColor;
+    font-weight: 800;
+    font-size: .9rem;
+    transition: .4s ease;
+
+    &:hover {
+      cursor: pointer;
+      padding: 5px;
+    }
+  }
+}

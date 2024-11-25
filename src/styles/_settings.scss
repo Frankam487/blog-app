@@ -1,4 +1,30 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  // border: 1px solid red;
+}
+@mixin childCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin childrenCenter($space) {
+  display: flex;
+  justify-content: $space;
+  align-items: center;
+}
+
+$white: #fff;
+$whiteCasse: #ffffffc2;
+$skyblue: rgb(63, 139, 220);
+$skyblue2: rgba(21, 147, 226, 0.673);
+$skyblueFonce: rgba(18, 82, 149, 0.978);
+$brownColor:rgba(29, 26, 26, 0.868); 
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }
