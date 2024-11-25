@@ -8,13 +8,13 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [rangeValue, setRangeValue] = useState(36);
   const [dataDisplay, setDataDisplay] = useState(true);
-  const radio = ['Africa', 'America', 'Asia', 'oceania', 'Antarctica'];
-  const [selectedRadio, setSelectedRadio] = useState('');
+  const radio = ['Africa', 'America', 'Asia', 'Antarctica'];
+  const [check, setCheck] = useState(false);
+  const [selectedRadio, setSelectedRadio] = useState(null);
   useEffect(() => {
     axios.get('https://restcountries.com/v3.1/all').then((res) => {
       setData(res.data);
       setDataDisplay(false);
-  
     });
   }, []);
   return (
@@ -29,13 +29,15 @@ const Home = () => {
             min="6"
             max="250"
           />
-          <h2>{ rangeValue } Pays</h2>
+          <h2>{rangeValue} Pays</h2>
           {radio.map((country, index) => (
             <li key={index}>
               <input
                 type="radio"
                 name="country"
                 id={country}
+                defaultValue={country}
+                checked={selectedRadio === country}
                 onChange={(e) => setSelectedRadio(e.target.id)}
               />
               <label htmlFor={country}>{country}</label>
@@ -43,6 +45,8 @@ const Home = () => {
           ))}
         </div>
         <SortFunction
+          check={check}
+          setCheck={setCheck}
           data={data}
           setSelectedRadio={setSelectedRadio}
           setData={setData}

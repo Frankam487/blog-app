@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
-    <div style={{display: "flex", alignItems: "center", justifyContent: 'center'}}>
-      <h2><img src="./public/pic.jpg" height={100} alt="" />React World</h2>
+    <div >
+      <h2><img src="./public/pic.jpg" height="40" alt="Logo react" />React World</h2>
     </div>
   );
 };

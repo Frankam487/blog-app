@@ -1,10 +1,4 @@
-import PropTypes from 'prop-types';
-const SortFunction = ({ data, setData, setSelectedRadio }) => {
-  SortFunction.propTypes = {
-    // data: PropTypes.string,
-    // setData: PropTypes.string,
-    // setSelectedRadio,
-  };
+const SortFunction = ({ data, setData, setSelectedRadio, check, setCheck }) => {
   const sortTop = () => {
     const sortedItems = [...data].sort((a, b) => b.population - a.population);
     setData(sortedItems);
