@@ -1,0 +1,73 @@
+.card-container {
+  flex-wrap: wrap;
+  @include childCenter;
+}
+
+.card {
+  width: 300px;
+
+  background-color: #fff;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  overflow: hidden;
+  /* Masquer les éléments qui débordent des coins arrondis */
+  margin: 20px;
+  /* Espacement entre les cartes */
+  transition: transform 0.3s ease-in-out;
+  /* Effet de transition lors du survol */
+
+  &:hover {
+    transform: scale(1.05);
+
+  }
+
+  .ok {
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+  }
+
+  .card-infos {
+    padding: 15px;
+
+    text-align: center;
+
+
+    h2 {
+      font-size: 1.5rem;
+
+      margin: 10px 0;
+
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+
+      color: #555;
+
+      margin: 5px 0;
+
+    }
+
+    i {
+      font-size: 1rem;
+
+      color: #777;
+
+    }
+  }
+}

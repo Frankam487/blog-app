@@ -34,16 +34,15 @@ const Home = () => {
             <i>{rangeValue} Pays</i>
           </div>
           {radio.map((country, index) => (
-          
-              <List
-                key={index}
-                selectedRadio={selectedRadio}
-                setSelectedRadio={setSelectedRadio}
-                country={country}
-              />
-            
+            <List
+              key={index}
+              selectedRadio={selectedRadio}
+              setSelectedRadio={setSelectedRadio}
+              country={country}
+            />
           ))}
         </div>
+
         <SortFunction
           check={check}
           setCheck={setCheck}
@@ -51,13 +50,17 @@ const Home = () => {
           setSelectedRadio={setSelectedRadio}
           setData={setData}
         />
+        <div className="card-container">
         {dataDisplay == true ? <p>Chargement en cous ...</p> : ''}
         {data
           .filter((country) => country.continents[0].includes(selectedRadio))
           .slice(0, rangeValue)
           .map((country, index) => (
-            <Card key={index} country={country} />
+            
+              <Card key={index} country={country} />
+            
           ))}
+        </div>
       </ul>
     </div>
   );
