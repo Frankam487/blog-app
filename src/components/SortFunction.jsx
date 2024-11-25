@@ -13,10 +13,13 @@ const SortFunction = ({ data, setData }) => {
     const sortedItems = [...data].sort((a, b) => a.population - b.population);
     setData(sortedItems);
   };
+  const resetSearch = () => {
+    console.log('ok');
+  }
   return (
     <div className="sortFunction">
       <button onClick={() => sortTop()}>+</button>
-      <button>Annuler la recherche</button>
+      <button onClick={() => resetSearch()}>Annuler la recherche</button>
       <button onClick={() => sortFlop()}>-</button>
     </div>
   );

@@ -37,7 +37,6 @@ const Home = () => {
                 id={country}
                 onChange={(e) => setSelectedRadio(e.target.id)}
               />
-              
               <label htmlFor={country}>{country}</label>
             </li>
           ))}
